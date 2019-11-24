@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOm-Ic-6Jb">
+                                <rect key="frame" x="70" y="64" width="235" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="znu-RX-kkb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrv-2y-jkg">
+                                <rect key="frame" x="20" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="H6Y-dI-sl7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="cm7-hs-3z0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="rIQ-Gw-kxg"/>
+                                    <constraint firstAttribute="width" constant="40" id="t5I-6Q-oML"/>
+                                </constraints>
+                                <state key="normal" image="location" catalog="system"/>
+                                <connections>
+                                    <action selector="locationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OQk-xm-Y0E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-Hv-SCL">
+                                <rect key="frame" x="315" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D1n-qH-Cb2"/>
+                                    <constraint firstAttribute="width" constant="40" id="aeE-JR-Kx8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" image="magnifyingglass" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2tZ-g7-ve8"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1QK-tG-DS4">
+                                <rect key="frame" x="91" y="330" width="165.33333333333337" height="237.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-t0-6gB">
+                                        <rect key="frame" x="12.666666666666671" y="0.0" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="9r9-rG-peG"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="me5-A7-xsw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-dK-UCA">
+                                        <rect key="frame" x="44.33333333333335" y="140" width="76.666666666666686" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-eq-i8s">
+                                                <rect key="frame" x="0.0" y="0.0" width="21.333333333333332" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-Ib-wQe">
+                                                <rect key="frame" x="21.333333333333314" y="0.0" width="20.666666666666671" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-8H-TSE">
+                                                <rect key="frame" x="42" y="0.0" width="34.666666666666657" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Localizing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NP-BV-6HH">
+                                        <rect key="frame" x="0.0" y="200" width="165.33333333333334" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QOm-Ic-6Jb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1tm-9F-nrr"/>
+                            <constraint firstItem="bcb-Hv-SCL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4tX-A8-Vcc"/>
+                            <constraint firstItem="Xrv-2y-jkg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cfl-OR-bom"/>
+                            <constraint firstItem="QOm-Ic-6Jb" firstAttribute="leading" secondItem="Xrv-2y-jkg" secondAttribute="trailing" constant="10" id="JVG-SY-bLg"/>
+                            <constraint firstItem="1QK-tG-DS4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PVO-zD-jUy"/>
+                            <constraint firstItem="1QK-tG-DS4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QaI-eG-Lo3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bcb-Hv-SCL" secondAttribute="trailing" constant="20" id="WcW-FU-7r3"/>
+                            <constraint firstItem="bcb-Hv-SCL" firstAttribute="leading" secondItem="QOm-Ic-6Jb" secondAttribute="trailing" constant="10" id="bM3-vf-hei"/>
+                            <constraint firstItem="Xrv-2y-jkg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="szq-Bq-2r4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="2NP-BV-6HH" id="8Pe-vA-MU8"/>
+                        <outlet property="conditionImageView" destination="oSc-t0-6gB" id="gju-rX-xKb"/>
+                        <outlet property="searchTextField" destination="QOm-Ic-6Jb" id="69y-wq-MKC"/>
+                        <outlet property="temperatureLabel" destination="NVW-eq-i8s" id="PmR-ci-jK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="137.27678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="sun.max.fill" catalog="system" width="64" height="62"/>
+    </resources>
+</document>
