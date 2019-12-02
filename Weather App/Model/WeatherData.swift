@@ -9,17 +9,17 @@
 import Foundation
 
 //Decodable protocol is required
-struct WeatherData: Codable {
+struct WeatherData: Decodable {
     let name: String
     let main: Main
     let weather: [Weather] //array of weather conditions
 }
 
-struct Main: Codable {
+struct Main: Decodable {
     let temp: Double
 }
 
-struct Weather: Codable {
+struct Weather: Decodable {
     let description: String
     let id: Int
 }
